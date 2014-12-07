@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
-  get 'posts/index'
+ # get 'posts/index'
 
-  get 'posts/show'
+ # get 'posts/show'
 
-  get 'posts/new'
+  #get 'posts/new'
 
-  get 'posts/edit'
+  #get 'posts/edit'
   
   resources :posts
 
-  get 'welcome/index'
+#  get 'welcome/index'
 
-  get 'welcome/about'
+#  get 'welcome/about'
   
   get 'about' => 'welcome#about'
   
