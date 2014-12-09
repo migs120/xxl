@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
  # get 'posts/show'
 
-  #get 'posts/new'
+ # get posts/new'
 
   #get 'posts/edit'
   
