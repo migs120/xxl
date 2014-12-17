@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
  # get posts/new'
 
-  #get 'posts/edit'
+ # get 'posts/edit'
   
 #   resources :posts
 #   resources :topics
