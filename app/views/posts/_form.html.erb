@@ -20,4 +20,19 @@
   <div class="form-group">
     <%= f.submit "Save", class: 'btn btn-success' %>
   </div>
+
+<!-- added avitar test-->
+      
+         <div class="form-group">
+           <p>Current avatar</p>
+           <%= image_tag( post.avatar.profile.url ) %>
+         </div>
+      
+       <div class="form-group">
+         <%= f.label :avatar %>
+         <%= f.file_field :avatar %>
+       
+       </div>
+<!-- added avitar test-->
+
 <% end %>
