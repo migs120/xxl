@@ -21,9 +21,13 @@ Rails.application.routes.draw do
 #   resources :posts
 #   resources :topics
   resources :topics do
-    resources :posts, except: [:index]
+  resources :posts, except: [:index]
+      
   end
 
+resources :posts, only: [:index] do
+   resources :comments, only: [:create]
+end
 #  get 'welcome/index'
 
 #  get 'welcome/about'

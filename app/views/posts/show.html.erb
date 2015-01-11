@@ -1,4 +1,3 @@
-
 <h1><%= markdown @post.title %></h1>
 
 <div class="row">
@@ -26,7 +25,12 @@
 
 
 
-<!--
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
--->
+
+
+<div class ="row">
+  <%= render 'comments/comment' %>
+  <%= render 'comments/form' %>
+</div>
+
+
+

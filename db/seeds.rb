@@ -44,6 +44,7 @@
  100.times do
    # user: users.sample,   # we have not yet associated Users with Comments
    Comment.create!(
+     user: users.sample,
      post: posts.sample,
      body: Faker::Lorem.paragraph
    )
