@@ -20,14 +20,27 @@ Rails.application.routes.draw do
   
 #   resources :posts
 #   resources :topics
-  resources :topics do
-  resources :posts, except: [:index]
-      
+  
+    resources :topics do
+    resources :posts, except: [:index] do
+      resources :comments, only: [:create, :destroy]
+    end
   end
+  
+  
+  
+#  --------------------------the first resouce style
+  
+#   resources :topics do
+#   resources :posts, except: [:index]
+      
+#   end
 
-resources :posts, only: [:index] do
-   resources :comments, only: [:create]
-end
+# resources :posts, only: [:index] do
+#    resources :comments, only: [:create, :destroy]
+# end
+#------------------------------------------------------
+
 #  get 'welcome/index'
 
 #  get 'welcome/about'
