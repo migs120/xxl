@@ -21,25 +21,31 @@ Rails.application.routes.draw do
 #   resources :posts
 #   resources :topics
   
-    resources :topics do
-    resources :posts, except: [:index] do
-      resources :comments, only: [:create, :destroy]
-    end
-  end
+#-----------------path---- topics_post_comments_path
   
+#     resources :topics do
+#     resources :posts, except: [:index] do
+#       resources :comments, only: [:create, :destroy] 
+
+#     end
+#   end
   
+
   
 #  --------------------------the first resouce style
   
-#   resources :topics do
-#   resources :posts, except: [:index]
+  resources :topics do
+  resources :posts, except: [:index]
       
-#   end
+  end
 
-# resources :posts, only: [:index] do
-#    resources :comments, only: [:create, :destroy]
-# end
+resources :posts, only: [:index] do
+   resources :comments, only: [:create, :destroy]
+       post '/up-vote' => 'votes#up_vote', as: :up_vote
+       post '/down-vote' => 'votes#down_vote', as: :down_vote
+end
 #------------------------------------------------------
+    
 
 #  get 'welcome/index'
 
