@@ -41,9 +41,14 @@
 
 
 <div class ="row">
-  <%= render 'comments/comment' %>
   <%= render 'comments/form' %>
+  <%@post.comments.each do |cmt|%>
+  <%= render partial: "comments/comment", locals: { comment: cmt }%>
+<%end%>
 </div>
+
+
+
 
 
 
