@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   
     has_many :comments, dependent: :destroy
     has_many :votes, dependent: :destroy
+    has_many :favorites, dependent: :destroy
     mount_uploader :avatar, AvatarUploader
      def up_votes
        votes.where(value: 1).count
@@ -37,7 +38,10 @@ class Post < ActiveRecord::Base
   #rspec add def create_vote
     def create_vote
     user.votes.create(value: 1, post: self)
+      
   end
+  
+   
 
   
 end
