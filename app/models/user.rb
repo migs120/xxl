@@ -21,4 +21,8 @@ class User < ActiveRecord::Base
      favorites.where(post_id: post.id).first
    end
   
+     def voted(post)
+       #favorites.where(post_id: post.id)  #like replicate
+       votes.where(post_id: post.id).first
+   end
 end
