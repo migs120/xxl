@@ -1,5 +1,5 @@
  require 'rails_helper'
-include TestFactories
+#include TestFactories
 
  describe Post do
    describe "vote methods" do
@@ -14,7 +14,8 @@ include TestFactories
        
       # post_user = double(votes: @post.votes)
        #allow(@post).to receive(:user) { post_user }
-       @post = associated_post
+      # @post = associated_post
+       @post = create(:post)
        @post.save
        3.times { @post.votes.create(value: 1) }
        2.times { @post.votes.create(value: -1) }
@@ -42,7 +43,8 @@ include TestFactories
    end
     describe '#create_vote' do
      it "generates an up-vote when explicitly called" do
-       post = associated_post
+      # post = associated_post
+       post = create(:post)
        expect( post.up_votes ).to eq(0)
        post.create_vote
        expect( post.up_votes ).to eq(1)
