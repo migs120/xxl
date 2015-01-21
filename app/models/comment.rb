@@ -6,7 +6,8 @@ validates :user, presence: true
 validates :body, length: { minimum: 5 }, presence: true
   
   
-     after_create :send_favorite_emails
+   after_create :send_favorite_emails
+   default_scope { order('updated_at DESC') }
  
    private
  

@@ -40,10 +40,15 @@
 
 
 <div class ="row">
-  <%= render 'comments/form' %>
+
+  <div class='js-comments'>
   <%@post.comments.each do |cmt|%>
   <%= render partial: "comments/comment", collection: @comments %>
 <%end%>
+   </div>
+ <div class='new-comment'>
+  <%= render 'comments/form' %>
+    </div>
 </div>
 
 
