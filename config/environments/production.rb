@@ -80,5 +80,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { host: 'sleepy-spire-6194.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'bloccitmg.herokuapp.com' }
 end
