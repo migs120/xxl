@@ -35,7 +35,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   #config.action_mailer.raise_delivery_errors = true # bloc diagnosis scrips
-    config.action_mailer.default_url_options = { host: 'https://ruby-on-rails-117942.nitrousapp.com' }
+    config.action_mailer.default_url_options = { host: 'https://migs-migs432.c9users.io' }
    config.action_mailer.delivery_method = :smtp
    config.action_mailer.perform_deliveries = true
  
